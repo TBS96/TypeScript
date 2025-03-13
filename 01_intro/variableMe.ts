@@ -51,4 +51,23 @@ let isLoggedIn: boolean = false;
 // let userId = 3131364.4;
 
 
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+
+// any (we can use it whenever we don’t want a particular value to cause typechecking errors, but NOT RECOMMENDED)
+
+let hero: string;
+
+function getHero() {
+    // return true;
+    return 'SpiderMan';
+}
+// hero = getHero();   // in case of true, Error: Type 'string | boolean' is not assignable to type 'string'. Type 'boolean' is not assignable to type 'string'
+hero = getHero();
+
+// noImplicitAny (When you don’t specify a type, and TypeScript can’t infer it from context, the compiler will typically default to any. You usually want to avoid this, though, because any isn’t type-checked. Use the compiler flag noImplicitAny to flag any implicit any as an error.)
+
+
+
 export {};

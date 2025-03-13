@@ -15,7 +15,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // Syntax:
 // let variableName: type = value;
-var greetings = 'Hello, Prantik';
+var greetings = 'Hello, Prantik'; // Temporary solution for the error: Cannot redeclare block-scoped variable 'greetings'.
 var myNum = 10;
 // myNum.toUpperCase(); // Error: Property 'toUpperCase' does not exist on type 'number'.
 // greetings.toLowercase();  // Error: Property 'toLowercase' does not exist on type 'string'. Did you mean 'toLowerCase'?
@@ -30,3 +30,12 @@ var isLoggedIn = false;
 // in these scenarios, we dont need to explicitly mention the type of the variable, as typescript can infer the type of the variable from the value assigned to it. It is called type inference. It is needed only when we want to explicitly mention the type of the variable in complex scenarios.
 // So, better syntax would be simply:
 // let userId = 3131364.4;
+// ----------------------------------------------------------------------------------------------------------------------------
+// any (we can use it whenever we don’t want a particular value to cause typechecking errors, but NOT RECOMMENDED)
+var hero;
+function getHero() {
+    // return true;
+    return 'SpiderMan';
+}
+// hero = getHero();   // in case of true, Error: Type 'string | boolean' is not assignable to type 'string'. Type 'boolean' is not assignable to type 'string'
+hero = getHero();
