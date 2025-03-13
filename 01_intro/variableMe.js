@@ -21,3 +21,12 @@ var myNum = 10;
 // greetings.toLowercase();  // Error: Property 'toLowercase' does not exist on type 'string'. Did you mean 'toLowerCase'?
 console.log(greetings);
 console.log(myNum);
+// ----------------------------------------------------------------------------------------------------------------------------
+// number
+var userId = 334466.2;
+// userId.allNumberMethods
+// boolean
+var isLoggedIn = false;
+// in these scenarios, we dont need to explicitly mention the type of the variable, as typescript can infer the type of the variable from the value assigned to it. It is called type inference. It is needed only when we want to explicitly mention the type of the variable in complex scenarios.
+// So, better syntax would be simply:
+// let userId = 3131364.4;

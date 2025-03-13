@@ -31,3 +31,23 @@ console.log(greetings);
 console.log(myNum);
 
 export {};  // Temporary solution for the error: Cannot redeclare block-scoped variable 'greetings'.
+
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+
+// number
+
+let userId: number = 334466.2;
+// userId.allNumberMethods
+
+
+// boolean
+
+let isLoggedIn: boolean = false;
+
+// in these scenarios, we dont need to explicitly mention the type of the variable, as typescript can infer the type of the variable from the value assigned to it. It is called type inference. It is needed only when we want to explicitly mention the type of the variable in complex scenarios.
+// So, better syntax would be simply:
+// let userId = 3131364.4;
