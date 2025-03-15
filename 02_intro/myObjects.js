@@ -19,3 +19,7 @@ function createCourse() {
         price: 999
     };
 }
+function createUser1(user) {
+    return { name: '', email: '', isActive: true };
+}
+createUser1({ name: '', email: '', isActive: true });

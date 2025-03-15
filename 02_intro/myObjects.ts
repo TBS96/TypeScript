@@ -22,4 +22,26 @@ function createCourse() :{name: string, price: number} {
 }
 
 
+
+// ------------------------------------------------------------------------------------------------------------------------------
+
+
+// ------------------------------------------ TYPE ALIASES IN TYPESCRIPT ------------------------------------------
+
+// We’ve been using object types and union types by writing them directly in type annotations. This is convenient, but it’s common to want to use the same type more than once and refer to it by a single name.
+
+type User = {
+    name: string,
+    email: string,
+    isActive: boolean
+};
+
+function createUser1(user: User): User {
+    return {name: '', email: '', isActive: true};
+}
+
+createUser1({name: '', email: '', isActive: true})
+
+
+
 export {}
