@@ -20,6 +20,41 @@ getUpper('prantik');
 signUpUser('prantik', '9tbs6@proton.me', false);
 loginUser('prantik', '9tbs6@proton.me');
 
+
+// We'll discuss much about the below later = > UNION.
+// function getValue(myVal: number): boolean {
+//     if (myVal > 5) {
+//         return true;
+//     }
+//     return '200 OK';    // Type 'string' is not assignable to type 'boolean'.
+// }
+
+
+const getHello = (s: string): string => {
+    return '';
+};
+
+
+const heros = ['spiderman', 'ironman', 'thor'];
+// const heros = [1, 2, 3];
+
+heros.map((hero): string => {
+    return `hero is ${hero}`;
+    // return 2;   // Type 'number' is not assignable to type 'string'.
+});
+
+
+function consoleError(errMsg: string): void {
+    console.log(errMsg);
+}
+
+
+// The never type represents values which are never observed. In a return type, this means that the function throws an exception or terminates execution of the program. never also appears when TypeScript determines there’s nothing left in a union.
+function handleError(errMsg: string): never {
+    throw new Error(errMsg);
+}
+
+
 export {}
 
 
