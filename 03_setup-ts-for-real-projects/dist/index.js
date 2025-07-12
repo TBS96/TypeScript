@@ -6,3 +6,10 @@ const myData = {
     phone: 1234567890
 };
 console.log(myData);
+const root = document.getElementById('root');
+if (root) {
+    root.innerHTML = `
+    <p>Name: ${myData.name}</p>
+    <p>Name: ${myData.phone}</p>
+`;
+}
