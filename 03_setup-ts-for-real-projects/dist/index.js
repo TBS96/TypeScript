@@ -29,12 +29,14 @@ console.log(myData);
 // console.log(user.city)
 // how would production grade code look like:
 class User1 {
-    constructor(email, name, userId) {
+    constructor(// constructor with parameter properties (shorthand initialization)
+    email, name, userId) {
         this.email = email;
         this.name = name;
         this.userId = userId;
         this._courseCount = 1;
         this.city = 'Kolkata';
+        // No explicit assignment needed here, TypeScript handles it
     }
     deleteToken() {
         console.log('Token deleted');

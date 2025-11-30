@@ -46,11 +46,13 @@ class User1 {
     private _courseCount = 1;
 
     readonly city: string = 'Kolkata';
-    constructor(
+    constructor(                    // constructor with parameter properties (shorthand initialization)
         public email: string,
         public name: string,
         private userId: string
-    ) {}
+    ) {
+        // No explicit assignment needed here, TypeScript handles it
+    }
 
     private deleteToken() {
         console.log('Token deleted');
