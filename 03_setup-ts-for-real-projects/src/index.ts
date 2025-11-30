@@ -42,12 +42,35 @@ console.log(myData);
 
 // how would production grade code look like:
 class User1 {
+
+    private _courseCount = 1;
+
     readonly city: string = 'Kolkata';
     constructor(
         public email: string,
         public name: string,
         private userId: string
     ) {}
+
+    private deleteToken() {
+        console.log('Token deleted');
+    }
+
+    get getAppleEmail(): string {
+        return `apple${this.email}`;
+    }
+
+    get courseCount(): number {
+        return this._courseCount;
+    }
+
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error('Course count should be more than 1');
+        }
+        this._courseCount = courseNum;
+    }
 }
 
 const user = new User1('prantik@gg.com', 'prantik', '012')
+// user.deleteToken()  // Property 'deleteToken' is private and only accessible within class 'User1'.
