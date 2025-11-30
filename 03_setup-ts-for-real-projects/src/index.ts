@@ -13,11 +13,41 @@ const myData: User = {
 
 console.log(myData);
 
-const root = document.getElementById('root');
+// const root = document.getElementById('root');
 
-if (root) {
-    root.innerHTML = `
-    <p>Name: ${myData.name}</p>
-    <p>Name: ${myData.phone}</p>
-`
+// if (root) {
+//     root.innerHTML = `
+//     <p>Name: ${myData.name}</p>
+//     <p>Phone: ${myData.phone}</p>
+// `
+// }
+
+
+// class User1 {
+//     public email: string;
+//     private name: string;
+//     readonly city: string = 'Kolkata';
+//     constructor(email: string, name: string) {
+//         this.email = email;
+//         this.name = name;
+//         this.city
+//     }
+// }
+
+// const user = new User1('prantik@gg.com', 'prantik')
+// user.city
+// // user.name
+// console.log(user.city)
+
+
+// how would production grade code look like:
+class User1 {
+    readonly city: string = 'Kolkata';
+    constructor(
+        public email: string,
+        public name: string,
+        private userId: string
+    ) {}
 }
+
+const user = new User1('prantik@gg.com', 'prantik', '012')
