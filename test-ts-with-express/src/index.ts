@@ -38,6 +38,14 @@ interface UserData {
     },
 }
 
+interface DOB {
+    ddMMyy: {
+        day: number,
+        month: string,
+        year: number
+    }
+}
+
 const myData: UserData = {
     name: 'prantik',
     phone: 123456789,
@@ -49,8 +57,18 @@ const myData: UserData = {
     },
 };
 
-app.get('/', (req: Request, res: Response) => {
-    res.status(200).json(myData);
+const dateOfBirth: DOB = {
+    ddMMyy: {
+        day: 1,
+        month: 'jan',
+        year: 1990
+    }
+};
+
+const mergedData: object = { ...myData, ...dateOfBirth };
+
+app.get('/api/v1/user', (req: Request, res: Response) => {
+    res.status(200).json(mergedData);
 });
 
 app.listen(PORT, () => {
