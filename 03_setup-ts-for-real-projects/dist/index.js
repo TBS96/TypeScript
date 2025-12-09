@@ -34,6 +34,7 @@ class User1 {
         this.email = email;
         this.name = name;
         this.userId = userId;
+        // private _courseCount = 1;
         this._courseCount = 1;
         this.city = 'Kolkata';
         // No explicit assignment needed here, TypeScript handles it
@@ -54,5 +55,15 @@ class User1 {
         this._courseCount = courseNum;
     }
 }
+class SubUser extends User1 {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}
 const user = new User1('prantik@gg.com', 'prantik', '012');
 // user.deleteToken()  // Property 'deleteToken' is private and only accessible within class 'User1'.
+// protected can be used in the same base class as well as in any class that inherits the base class. it cannot be used in any instances of a class(thats created with 'new' keyword.)

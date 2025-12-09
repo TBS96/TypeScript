@@ -43,7 +43,8 @@ console.log(myData);
 // how would production grade code look like:
 class User1 {
 
-    private _courseCount = 1;
+    // private _courseCount = 1;
+    protected _courseCount = 1;
 
     readonly city: string = 'Kolkata';
     constructor(                    // constructor with parameter properties (shorthand initialization)
@@ -74,5 +75,15 @@ class User1 {
     }
 }
 
+
+class SubUser extends User1 {
+    isFamily: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}
+
 const user = new User1('prantik@gg.com', 'prantik', '012')
 // user.deleteToken()  // Property 'deleteToken' is private and only accessible within class 'User1'.
+
+// protected can be used in the same base class as well as in any class that inherits the base class. it cannot be used in any instances of a class(thats created with 'new' keyword.)
