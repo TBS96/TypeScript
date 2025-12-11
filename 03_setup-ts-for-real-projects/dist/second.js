@@ -15,6 +15,7 @@ class Youtube {
     }
     createStory() {
         console.log('Story was created');
+        return Math.floor(Math.random() * 23);
     }
 }
 const obj1 = new Youtube('cm', 'fil', 3, 'sh');

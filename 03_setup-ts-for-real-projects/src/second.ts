@@ -5,7 +5,7 @@ interface TakePhoto {
 }
 
 interface Story {
-    createStory(): void
+    createStory(): number
 }
 
 class Instagram implements TakePhoto {
@@ -24,8 +24,9 @@ class Youtube implements TakePhoto, Story {
         public short: string
     ) {}
 
-    createStory(): void {
+    createStory(): number {
         console.log('Story was created');
+        return Math.floor(Math.random() * 23);
     }
 }
 
