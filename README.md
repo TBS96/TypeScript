@@ -2,7 +2,7 @@
 
 ## Global Installation
 
-Install TypeScript globally using npm:
+Install TypeScript globally using `npm`:
 ```bash
 npm install -g typescript
 ```
