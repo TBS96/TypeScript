@@ -35,3 +35,30 @@ const getMoreSearchProducts1 = (products) => {
     return products[myIndex];
 };
 // getMoreSearchProducts and getMoreSearchProducts1 are same
+// Generic classes:
+function anotherFunction(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+function anotherFunction1(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+const options = {
+    connection: 'mongodb+srv//hshsb/dsds',
+    username: 'prantik',
+    password: 'bssjbjsbjsb'
+};
+console.log(anotherFunction1([0].length + 8000, options));
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
