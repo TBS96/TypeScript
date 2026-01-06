@@ -19,3 +19,19 @@ const ifour = identityFour({
     type: 99,
 });
 console.log(ifour);
+function getSearchProducts(products) {
+    // do some db operations
+    const myIndex = 3;
+    return products[myIndex];
+}
+const getMoreSearchProducts = (products) => {
+    // do some db operations
+    const myIndex = 4;
+    return products[myIndex];
+};
+const getMoreSearchProducts1 = (products) => {
+    // do some db operations
+    const myIndex = 4;
+    return products[myIndex];
+};
+// getMoreSearchProducts and getMoreSearchProducts1 are same
